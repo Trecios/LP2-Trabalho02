@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Helper()
+comment0.text=\n\ Default\ constructor\ for\ test\ class\ Helper\n
+comment1.params=
+comment1.target=void\ setUp()
+comment1.text=\n\ Sets\ up\ the\ test\ fixture.\n\n\ Called\ before\ every\ test\ case\ method.\n
+comment2.params=
+comment2.target=void\ testBook()
+comment2.text=\n\ Test\ whether\ we\ can\ book\ a\ taxi.\n
+comment3.params=
+comment3.target=void\ testArrived()
+comment3.text=\n\ Test\ the\ status\ of\ a\ taxi\ and\ a\ shuttle\ after\ it\ has\ arrived.\n
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+numComments=5

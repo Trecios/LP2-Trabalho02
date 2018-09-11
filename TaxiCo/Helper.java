@@ -36,14 +36,21 @@ public class Helper
     public void testBook()
     {
         setUp();
-        Taxi taxi1 = (Taxi) taxiCo1.lookup("Car #1");       
+        Taxi taxi1 = (Taxi) taxiCo1.lookup("Car #1");
+        System.out.println(taxi1.getID());
+        System.out.println("Função getID (taxi) funcionou!");
+        System.out.println(taxi1.getDestination());
+        System.out.println("Função getDestination (taxi) funcionou!");
+        System.out.println(taxi1.getLocation());
+        System.out.println("Função getLocation (taxi) funcionou!");
         taxi1.book("HIPER");
         taxiCo1.showStatus();
         if ("HIPER".equalsIgnoreCase(taxi1.getDestination()) ) {
-            System.out.println("Funcionou");
+            System.out.println("Funçao showStatus funcionou!");
         } else { 
             System.out.println("Alguma coisa errada");
         }
+        System.out.println();
     }
 
     /**
@@ -51,14 +58,23 @@ public class Helper
      */
     public void testArrived()
     {
-        Shuttle shuttle1 = (Shuttle) taxiCo1.lookup("Shuttle #3");    
+        Shuttle shuttle1 = (Shuttle) taxiCo1.lookup("Shuttle #3");
+        System.out.println(shuttle1.getID());
+        System.out.println("Função getID (shuttle) funcionou!");
         Taxi taxi1 = (Taxi) taxiCo1.lookup("Car #1");
         taxi1.book("HIPER");
         taxi1.arrived();
         shuttle1.arrived();
+        System.out.println(shuttle1.getDestination());
+        System.out.println("Função getDestination (shuttle) funcionou!");
+        System.out.println(shuttle1.getLocation());
+        System.out.println("Função getLocation (shuttle) funcionou!");
+        System.out.println(taxi1.getStatus());
+        System.out.println(shuttle1.getStatus());
+        System.out.println("Função showStatus (shuttle & Taxi) funcionou!");
         taxiCo1.showStatus();
         if ( taxi1.getDestination() == null && "HIPER".equalsIgnoreCase(taxi1.getLocation()) ) {
-            System.out.println("Funcionou");
+            System.out.println("Funcionou showStatus funcionou!");
         } else { 
             System.out.println("Alguma coisa errada");
         }
